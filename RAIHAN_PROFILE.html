@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Raihan — Rajagiri Student</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#3b82f6;
+      --muted:#6b7280;
+      --bg:#0f172a;
+      --card:#0b1220;
+      --glass: rgba(255,255,255,0.06);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#020617 0%, #07102a 100%);color:#e6eef8}
+
+    /* Parallax sections */
+    .parallax{position:relative;min-height:75vh;display:flex;align-items:center;justify-content:center;text-align:center;background-size:cover;background-position:center;background-attachment:fixed}
+    .panel{padding:6rem 1.5rem}
+
+    /* Content card in panels */
+    .card{background:var(--glass);backdrop-filter: blur(6px);border-radius:14px;padding:28px;max-width:980px;width:100%;box-shadow:0 10px 30px rgba(2,6,23,0.7)}
+
+    h1{font-size:clamp(2rem,4vw,3rem);margin:0 0 0.25rem}
+    h2{margin:0 0 0.5rem;font-weight:600}
+    p.lead{color:var(--muted);margin:0 0 1rem}
+
+    /* Grid for about + stats */
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center}
+    @media (max-width:880px){.two-col{grid-template-columns:1fr}.parallax{background-attachment:scroll}}
+
+    .avatar{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .meta-list{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .meta{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:0.9rem}
+
+    /* Skills */
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600}
+
+    /* Projects grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .project{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:14px;border-radius:10px}
+    .project h3{margin:0 0 6px;font-size:1rem}
+    .project p{margin:0;color:var(--muted);font-size:0.92rem}
+
+    /* Contact */
+    .cta{display:inline-flex;gap:10px;align-items:center;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#021025;text-decoration:none;font-weight:700}
+
+    footer{padding:28px 18px;text-align:center;color:var(--muted);font-size:0.95rem}
+
+    /* subtle floating shapes */
+    .float-shape{position:absolute;filter:blur(60px);opacity:0.14;border-radius:20px}
+    .shape-1{width:380px;height:200px;left:6%;top:10%;background:linear-gradient(90deg,#7c3aed,#06b6d4)}
+    .shape-2{width:320px;height:180px;right:6%;bottom:8%;background:linear-gradient(90deg,#f97316,#ef4444)}
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+
+  <!-- Hero parallax -->
+  <section class="parallax" style="background-image:url('https://images.unsplash.com/photo-1509157454559-5f3f3f7d0f8e?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=8c5b6bdc18b4b18e3b7b8b6f9b7e8b6f');">
+    <div class="card">
+      <div class="avatar"><img alt="Raihan" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=6a8e3cef2b2a5f1d3c1e"/></div>
+      <h1>Raihan — Rajagiri Student</h1>
+      <p class="lead">Undergraduate student at Rajagiri College. Passionate about software development, data science and campus leadership. Currently exploring web technologies, ML basics and open-source contribution.</p>
+      <div class="meta-list">
+        <div class="meta">Department: Computer Science</div>
+        <div class="meta">Year: 3rd Year</div>
+        <div class="meta">Location: Kochi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About parallax -->
+  <section class="parallax" style="background-image:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=5d4b7c7c9e5f6a2f1b0b');min-height:55vh;">
+    <div class="card panel">
+      <div class="two-col">
+        <div>
+          <h2>About</h2>
+          <p class="lead">Hi! I'm Raihan — a curious developer and a student at Rajagiri College. I enjoy building small web apps, learning machine learning fundamentals and participating in coding competitions. I also take part in student clubs and community projects on campus.</p>
+
+          <h3 style="margin-top:18px">Top Skills</h3>
+          <div class="chips" style="margin-top:10px">
+            <span class="chip">HTML &amp; CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Python</span>
+            <span class="chip">Data Analysis</span>
+            <span class="chip">Git</span>
+            <span class="chip">SQL</span>
+          </div>
+        </div>
+
+        <aside>
+          <h3 class="center">Academic Snapshot</h3>
+          <p class="center muted">CGPA: <strong>8.4</strong></p>
+          <p class="center muted">Relevant Coursework: Data Structures, DBMS, ML Intro, Web Dev</p>
+
+          <div style="height:16px"></div>
+          <a class="cta" href="#contact">Contact Raihan</a>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="panel">
+    <div class="card">
+      <h2 class="center">Projects &amp; Experience</h2>
+      <p class="muted center" style="margin-bottom:18px">A few highlights from coursework and personal projects</p>
+
+      <div class="grid">
+        <div class="project">
+          <h3>Campus Events Portal</h3>
+          <p>Full-stack web app to list and RSVP to campus events. Built with Flask + SQLite and a responsive front-end.</p>
+        </div>
+        <div class="project">
+          <h3>ML: Student Performance Predictor</h3>
+          <p>Exploratory data analysis and a simple regression model to predict student scores from study habits and attendance.</p>
+        </div>
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>Personal responsive portfolio demonstrating projects, blog posts and contact form. Deployed using GitHub Pages.</p>
+        </div>
+        <div class="project">
+          <h3>Club: TechLead</h3>
+          <p>Organized weekly coding sessions and workshops on web development for first-year students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact parallax -->
+  <section class="parallax" id="contact" style="background-image:url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=0f8c6b0d4c5e8d5f7a6c');min-height:45vh;">
+    <div class="card panel center">
+      <h2>Get in touch</h2>
+      <p class="lead">Open to internships, mentorship and collaboration on small projects.</p>
+
+      <p class="muted">Email: <strong>raihan@example.com</strong> &nbsp;•&nbsp; Phone: <strong>+91 9XXXXXXXXX</strong></p>
+
+      <div style="height:10px"></div>
+      <a class="cta" href="mailto:raihan@example.com">Email Raihan</a>
+    </div>
+  </section>
+
+  <footer>
+    Built with ❤️ — Rajagiri · Student Profile
+  </footer>
+
+  <!-- floating shapes -->
+  <div class="float-shape shape-1" aria-hidden></div>
+  <div class="float-shape shape-2" aria-hidden></div>
+
+  <script>
+    // Light parallax effect for modern browsers (and fallback to background-attachment on mobile)
+    (function(){
+      const sections = document.querySelectorAll('.parallax');
+      function onScroll(){
+        const y = window.scrollY;
+        sections.forEach((s, i)=>{
+          const speed = 0.25 + (i*0.02);
+          // translate element background for a smoother parallax (mobile-friendly)
+          s.style.backgroundPosition = `center ${-y * speed}px`;
+        })
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+    })();
+  </script>
+</body>
+</html>
